@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/second_img1"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/taxi_number"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/customdesing"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+            android:ems="10"
+            android:hint="Enter Taxi Number"
+            android:imeOptions="actionSearch"
+            android:inputType="textCapWords|textCapCharacters"
+            android:maxLength="12"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textColor="#FF0000"
+            android:textSize="24sp"            
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/get_rating"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_alignRight="@+id/taxi_number"
+            android:layout_below="@+id/taxi_number"
+            android:layout_marginTop="58dp"
+            android:background="#CCd3d3d3"
+            android:text="@string/GetRating" />
+
+        <Button
+            android:id="@+id/rate_now"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_alignBaseline="@+id/get_rating"
+            android:layout_alignBottom="@+id/get_rating"
+            android:layout_alignLeft="@+id/taxi_number"
+            android:background="#CCd3d3d3"
+            android:text="@string/ratenow" />
+        
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_ratenow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_one"
+        android:gravity="center_horizontal"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/driver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/driver" />
+
+        <Button
+            android:id="@+id/red_driver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/driver"
+            android:layout_marginRight="0dp"
+            android:layout_toRightOf="@+id/driver"
+            android:background="@drawable/buttonleftcorner"
+            android:text="Bad" />
+
+        <Button
+            android:id="@+id/yellow_driver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/driver"
+            android:layout_marginRight="0dp"
+            android:layout_toRightOf="@+id/red_driver"
+            android:background="@drawable/buttonmiddle"
+            android:text="Ok" />
+
+        <Button
+            android:id="@+id/green_driver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/driver"
+            android:layout_toRightOf="@+id/yellow_driver"
+            android:background="@drawable/buttonrightcorner"
+            android:text="Good" />
+
+        <Button
+            android:id="@+id/vehicle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/driver"
+            android:layout_below="@+id/driver"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/vehicle" />
+
+        <Button
+            android:id="@+id/red_vehicle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/vehicle"
+            android:layout_marginRight="0dp"
+            android:layout_toRightOf="@+id/vehicle"
+            android:background="@drawable/buttonleftcorner"
+            android:text="Bad" />
+
+        <Button
+            android:id="@+id/yellow_vehicle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/vehicle"
+            android:layout_marginRight="0dp"
+            android:layout_toRightOf="@+id/red_vehicle"
+            android:background="@drawable/buttonmiddle"
+            android:text="Ok" />
+
+        <Button
+            android:id="@+id/green_vehicle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/vehicle"
+            android:layout_toRightOf="@+id/yellow_vehicle"
+            android:background="@drawable/buttonrightcorner"
+            android:text="Good" />
+
+        <Button
+            android:id="@+id/fare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/vehicle"
+            android:layout_below="@+id/vehicle"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/fare" />
+
+        <Button
+            android:id="@+id/red_fare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/fare"
+            android:layout_marginRight="0dp"
+            android:layout_toRightOf="@+id/fare"
+            android:background="@drawable/buttonleftcorner"
+            android:text="Bad" />
+
+        <Button
+            android:id="@+id/yellow_fare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/red_fare"
+            android:layout_marginRight="0dp"
+            android:layout_toRightOf="@+id/red_fare"
+            android:background="@drawable/buttonmiddle"
+            android:text="Ok" />
+
+        <Button
+            android:id="@+id/green_fare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/yellow_fare"
+            android:layout_toRightOf="@+id/yellow_fare"
+            android:background="@drawable/buttonrightcorner"
+            android:text="Good" />
+
+        <Button
+            android:id="@+id/rating_btnclear"
+            android:layout_width="135dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/fare"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="85dp"
+            android:text="@string/btnclear" />
+
+        <Button
+            android:id="@+id/rating_btnsubmit"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_alignBaseline="@+id/rating_btnclear"
+            android:layout_alignBottom="@+id/rating_btnclear"
+            android:layout_toRightOf="@+id/rating_btnclear"
+            android:text="@string/btnsubmit" />
+
+        <EditText
+            android:id="@+id/rating_driver_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/fare"
+            android:layout_marginTop="170dp"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/rating_vehicle_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/rating_driver_value"
+            android:layout_toRightOf="@+id/rating_driver_value"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/rating_fare_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/rating_vehicle_value"
+            android:layout_toRightOf="@+id/rating_vehicle_value"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_get_rating"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/layout_one"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/getRating_driver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="39dp"
+            android:layout_marginTop="30dp"          
+            android:background="@drawable/bdriver" />
+
+        <Button
+            android:id="@+id/getRating_vehicle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/getRating_driver"
+            android:layout_below="@+id/getRating_driver"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bvehicle" />
+
+        <Button
+            android:id="@+id/getRating_fare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/getRating_vehicle"
+            android:layout_below="@+id/getRating_vehicle"
+            android:background="@drawable/bfare" />
+
+        <Button
+            android:id="@+id/search_again"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/getRating_fare"
+           
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="80dp"
+            android:text="Search again" />
+
+        <Button
+            android:id="@+id/hired"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignBaseline="@+id/search_again"
+            android:layout_alignBottom="@+id/search_again"
+            android:layout_marginLeft="34dp"
+            android:layout_toRightOf="@+id/search_again"
+            android:text="Hired" />
+    </RelativeLayout>
+
+</RelativeLayout>
