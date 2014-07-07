@@ -7,9 +7,6 @@ import java.util.Date;
 public class AgeCalculation {
 private int startYear;
 private int startMonth;
-private int startDay;
-private int endYear;
-private int endMonth;
 private int endDay;
 private int resYear;
 private int resMonth;
